@@ -175,7 +175,6 @@ function collectDOMStat(root) {
           stat.texts++;
           break;
       }
-
     }
   })(root);
 
