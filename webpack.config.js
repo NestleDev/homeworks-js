@@ -8,15 +8,16 @@ let path = require('path');
 rules.push({
     test: /\.css$/,
     use: ExtractTextPlugin.loader
+
 });
 
 module.exports = {
     entry: {
         main: './src/index.js',
-        dnd: './src/dnd.js'
+        towns: './src/towns.js'
     },
     devServer: {
-        index: 'dnd.html'
+        index: 'towns.html'
     },
     output: {
         filename: '[name].[hash].js',
@@ -25,7 +26,6 @@ module.exports = {
     devtool: 'source-map',
     module: { rules },
     plugins: [
-       
         new ExtractTextPlugin('styles.css'),
         new HtmlPlugin({
             title: 'Main Homework',
@@ -34,9 +34,9 @@ module.exports = {
         }),
         new HtmlPlugin({
             title: 'Div Drag And Drop',
-            template: 'dnd.hbs',
-            filename: 'dnd.html',
-            chunks: ['dnd']
+            template: 'towns.hbs',
+            filename: 'towns.html',
+            chunks: ['towns']
         }),
         new CleanWebpackPlugin(['dist'])
     ]
