@@ -102,7 +102,7 @@ const filterResult = homeworkContainer.querySelector('#filter-result');
       loadingBlock.textContent = `Не удалось загрузить города! Ошибка ${error.message} `;
       loadingBlock.appendChild(button);
     });
-})()
+})();
 
 export {
   loadTowns,
